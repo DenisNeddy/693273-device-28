@@ -1,0 +1,260 @@
+:root {
+  --basicWhite: #ffffff;
+  --specialBlack03: rgba(0, 0, 0, 0.3);
+  --basicBlack: #000000;
+
+  --basicDark: #363636;
+
+  --lightGrey: #e5e5e5;
+  --basicGrey: #7e7e7e;
+  --darkGrey: #464646;
+  
+  --specialYellow: #f7e296;
+  --specialYellowDark: #f0c52e;
+  
+  --specialGreen: #91c92f;
+  
+  --specialRed: #f6dada;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/open-sans-v17-latin_cyrillic-ext_cyrillic-300.eot');
+  src: local('Open Sans Light'), local('OpenSans-Light'),
+       url('../fonts/open-sans-v17-latin_cyrillic-ext_cyrillic-300.woff2') format('woff2'), 
+       url('../fonts/open-sans-v17-latin_cyrillic-ext_cyrillic-300.woff') format('woff') 
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/open-sans-v17-latin_cyrillic-ext_cyrillic-regular.eot'); 
+  src: local('Open Sans Regular'), local('OpenSans-Regular'),
+       url('../fonts/open-sans-v17-latin_cyrillic-ext_cyrillic-regular.woff2') format('woff2'), 
+       url('../fonts/open-sans-v17-latin_cyrillic-ext_cyrillic-regular.woff') format('woff')
+}
+
+
+@font-face {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 300;
+  
+  src: local('Open Sans Light'), local('OpenSans-Light'),
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  min-width: 1160px;
+  
+  font-size: 15px;
+  line-height: 28px;
+  font-weight: 300; 
+  font-family: "Open Sans", Arial, sans-serif;
+  color: var(--basicBlack);
+
+  background-color: var(--basicWhite); 
+}
+
+
+a {
+  text-decoration: none;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.page {
+  height: 100%;
+}
+
+
+.page-body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px,1px,1px,0);
+}
+
+.container {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+
+.main-header {
+  margin-top: 40px;
+}
+
+.main-header .navigation-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  padding: 0;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 50px;
+
+  background-color: var(--specialYellow);
+}
+
+.user-navigation {
+  order: -1;
+
+  display: flex;
+
+  background-color: lime;
+}
+
+
+.site-navigation .logo-header {
+  position: absolute;
+  top: -20px;
+  left: 60px;
+}
+
+
+.site-navigation .navigation-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+
+.navigation-item > a {
+  font-size: 18px;
+  line-height: 22px;
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--basicBlack);
+}
+
+
+.navigation-item .menu-list {
+  display: block;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+
+.menu-list a {
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 300;
+  color: var(--basicBlack);
+}
+
+.search-field .input-search {
+  width: 358px;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid var(--basicBlack);
+}
+
+.input-search::placeholder {
+  margin: 0;
+  padding: 0;
+  
+  font-size: 15px;
+  line-height: 15px;
+  line-height: 20px;
+  color: var(--specialBlack03);
+}
+
+.search-field .button-search {
+  padding: 15px 17px;
+
+  font-size: 15px;
+  line-height: 20px;
+  text-transform: uppercase;
+  
+  background-color: transparent;
+
+  border: 2px solid var(--basicBlack);
+}
+
+
+.login,
+.compare,
+.shop {
+  margin-top: 44px;
+  background-color: teal;
+}
+
+.login {
+  margin-left: 100px;
+}
+
+.compare {
+  margin-right: 41px;
+  margin-left: 213px;
+}
+
+.shop {
+  position: relative;
+  
+  margin-left: auto;
+  padding-left: 22px;
+}
+
+
+.shop::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 11px;
+  height: 11px;
+
+  background-image: url("../img/icon_cart.svg");
+  background-repeat: no-repeat;
+
+}
+
+ .login a,
+ .compare a,
+ .shop a {
+  font-size: 15px;
+  line-height: 20px;
+  color: inherit;
+
+  background-color: tomato;
+ }
+
+
+ 
+
+
