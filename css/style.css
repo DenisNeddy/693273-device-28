@@ -336,10 +336,11 @@ img {
   background-color: tomato;
 }
 
-.catalog-link {
+.catalog {
   position: relative;
-
-  padding-right: 10px;
+}
+.catalog > a {
+  padding-right: 37px;
 
   min-width: 230px;
 
@@ -348,8 +349,12 @@ img {
   background-color: teal;
 }
 
-.catalog-link:hover ~ .menu-list-wrapper {
+.catalog:hover .menu-list-wrapper {
   display: block;
+}
+
+.navigation-item:first-child {
+  position: relative;
 }
 
 .navigation-item:nth-child(2) {
@@ -364,7 +369,7 @@ img {
   margin-left: 111px;
 }
 
-.navigation-item::before {
+.catalog::before {
   content: "";
   position: absolute;
   top: 3px;
@@ -398,7 +403,7 @@ img {
 
 .navigation-item .menu-list {
   display: flex;
-  
+  flex-direction: column;
   flex-wrap: wrap;
   position: absolute;
   top: 25px;
@@ -407,7 +412,7 @@ img {
   padding: 0;
   padding-left: 60px;
   padding-right: 60px;
-  max-width: 700px;
+  min-width: 1160px;
   list-style: none;
 
   background-color: teal;
