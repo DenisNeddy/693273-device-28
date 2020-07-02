@@ -30,7 +30,7 @@
   src: url('../fonts/open-sans-v17-latin_cyrillic-ext_cyrillic-300.eot');
   src: local('Open Sans Light'), local('OpenSans-Light'),
        url('../fonts/open-sans-v17-latin_cyrillic-ext_cyrillic-300.woff2') format('woff2'), 
-       url('../fonts/open-sans-v17-latin_cyrillic-ext_cyrillic-300.woff') format('woff') 
+       url('../fonts/open-sans-v17-latin_cyrillic-ext_cyrillic-300.woff') format('woff');
 }
 
 @font-face {
@@ -40,15 +40,23 @@
   src: url('../fonts/open-sans-v17-latin_cyrillic-ext_cyrillic-regular.eot'); 
   src: local('Open Sans Regular'), local('OpenSans-Regular'),
        url('../fonts/open-sans-v17-latin_cyrillic-ext_cyrillic-regular.woff2') format('woff2'), 
-       url('../fonts/open-sans-v17-latin_cyrillic-ext_cyrillic-regular.woff') format('woff')
+       url('../fonts/open-sans-v17-latin_cyrillic-ext_cyrillic-regular.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'Gilroy';
-  font-style: normal;
-  font-weight: 300;
-  
-  src: local('Open Sans Light'), local('OpenSans-Light'),
+font-family: 'Gilroy';
+src: url('gilroylight.woff2') format('woff2'),
+url('gilroylight.woff') format('woff');
+font-weight: 300;
+}
+
+@font-face {
+font-family: 'Gilroy';
+font-style: normal;
+font-weight: 800;
+src: url('gilroyextrabold.woff2') format('woff2'),
+     url('gilroyextrabold.woff') format('woff');
+
 }
 
 body {
@@ -102,7 +110,7 @@ img {
   margin-top: 40px;
 }
 
-.main-header .navigation-wrapper {
+.navigation-wrapper {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -136,7 +144,7 @@ img {
   opacity: 0.3;
 }
 
-.search-field {
+.search-field form {
   display: flex;
   align-items: start;
 
@@ -334,14 +342,14 @@ img {
 .navigation-item > a {
   font-size: 18px;
   line-height: 22px;
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-weight: 800;
   text-transform: uppercase;
   color: var(--basicBlack);
 }
 
 .navigation-item .menu-list {
-  display: none;
+  display: block;
 
   margin: 0;
   padding: 0;
