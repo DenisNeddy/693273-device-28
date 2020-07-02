@@ -1,6 +1,7 @@
 :root {
   --basicWhite: #ffffff;
   --specialBlack03: rgba(0, 0, 0, 0.3);
+  --speacialBlack06: rgba(0, 0, 0, 0.6);
   --basicBlack: #000000;
 
   --basicDark: #363636;
@@ -134,7 +135,7 @@ img {
 .site-navigation .logo-header {
   position: absolute;
   top: -20px;
-  left: 60px;
+  left: 56px;
 }
 
 
@@ -174,13 +175,31 @@ img {
   color: var(--basicBlack);
 }
 
+
+.search-field {
+  display: flex;
+  align-items: start;
+
+  margin-top: 24px;
+
+  width: 444px;
+  min-height: 50px;
+  background-color: tomato;
+}
+
+
 .search-field .input-search {
   width: 358px;
   margin: 0;
   padding: 0;
+  padding-top: 23px;
+  padding-bottom: 9px;
+  padding-left: 39px;
+
+  box-sizing: border-box;
+
   background-color: transparent;
-  border: none;
-  border-bottom: 2px solid var(--basicBlack);
+  border: none; 
 }
 
 .input-search::placeholder {
@@ -193,8 +212,45 @@ img {
   color: var(--specialBlack03);
 }
 
+.input-search:hover::placeholder {
+  color: var(--specialBlack06);
+}
+
+
+.input-search:focus {
+  border-bottom: 2px solid var(--basicBlack);
+  outline: none;
+}
+
+.input-search:focus .button-search {
+  display: block;
+}
+
+
+.label-search {
+  position: relative;
+  
+  background-color: teal;
+}
+
+
+.label-search::before {
+  content: "";
+  position: absolute;
+  top: 21px;
+  left: 0;
+
+  width: 17px;
+  height: 17px;
+
+  background-image: url(../img/icon_search.svg);
+  background-repeat: no-repeat;
+}
+
+
 .search-field .button-search {
-  padding: 15px 17px;
+  display: none;
+  padding: 13px 15px;
 
   font-size: 15px;
   line-height: 20px;
@@ -209,18 +265,53 @@ img {
 .login,
 .compare,
 .shop {
-  margin-top: 44px;
+  margin-top: 38px;
   background-color: teal;
 }
 
 .login {
-  margin-left: 100px;
+  position: relative;
+
+  margin-left: 95px;
+  padding-left: 24px;
 }
 
-.compare {
-  margin-right: 41px;
-  margin-left: 213px;
+
+.login::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 0;
+
+  width: 14px;
+  height: 15px;
+
+  background-image: url("../img/icon_user.svg");
+  background-repeat: no-repeat;
 }
+
+
+.compare {
+  position: relative;
+
+  margin-left: 216px;
+  padding-left: 24px;
+}
+
+
+.compare::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 0;
+
+  width: 15px;
+  height: 15px;
+
+  background-image: url("../img/icon_chart.svg");
+  background-repeat: no-repeat;
+}
+
 
 .shop {
   position: relative;
