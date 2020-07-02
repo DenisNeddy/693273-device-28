@@ -1,8 +1,9 @@
 :root {
   --specialWhite03: rgba(255, 255, 255, 0.3);
   --basicWhite: #ffffff;
+
   --specialBlack03: rgba(0, 0, 0, 0.3);
-  --speacialBlack06: rgba(0, 0, 0, 0.6);
+  --specialBlack06: rgba(0, 0, 0, 0.6);
   --basicBlack: #000000;
 
   --basicDark: #363636;
@@ -332,21 +333,20 @@ img {
   padding: 0;
 
   list-style: none;
-
-  background-color: tomato;
 }
 
 .catalog {
   position: relative;
+
+  cursor: pointer;
 }
+
 .catalog > a {
-  padding-right: 37px;
+  padding-right: 36px;
 
   min-width: 230px;
 
   letter-spacing: 2px;
-
-  background-color: teal;
 }
 
 .catalog:hover .menu-list-wrapper {
@@ -367,6 +367,15 @@ img {
 
 .navigation-item:last-child {
   margin-left: 111px;
+}
+
+.navigation-item a[href]:hover,
+.navigation-item a[href]:focus {
+  color: var(--specialBlack06);
+}
+
+.navigation-item a[href]:active {
+  color: var(--specialBlack03);
 }
 
 .catalog::before {
@@ -398,7 +407,7 @@ img {
 }
 
 .menu-list-wrapper {
-  display: block;
+  display: none;
 }
 
 .navigation-item .menu-list {
@@ -412,12 +421,13 @@ img {
   padding: 0;
   padding-left: 60px;
   padding-right: 60px;
+  padding-bottom: 37px;
 
   min-width: 1160px;
 
   list-style: none;
 
-  background-color: teal;
+  background-color: var(--specialYellow);
 }
 
 .menu-list a {
@@ -442,11 +452,19 @@ img {
 
 .catalog .column-item {
   margin-bottom: 8px;
-  background-color: crimson;
 }
 
 .catalog .column-item:last-child {
   margin-bottom: 0;
+}
+
+.column-item a[href]:hover,
+.column-item a[href]:focus {
+  color: var(--specialBlack06);
+}
+
+.column-item a[href]:active {
+  color: var(--specialBlack03);
 }
  
 
