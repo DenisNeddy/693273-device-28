@@ -7,89 +7,96 @@
       <title>Магазин Device</title>
    </head>
    <body class="page-body">
-      <header class="main-header inner-header">
-         <nav class="site-navigation">
-            <a class="logo-header">
-            <img src="img/logo.png" width="171" height="43" alt="Логотип магазина DEVICE">
-            </a>
-            <ul class="navigation-list">
-               <li class="navigation-item">
-                  <a href="#">
-                  Каталог товаров
-                  </a>
-                  <ul class="menu-list">
-                     <li class="menu-item">
-                        <a href="#">
-                        Виртуальная реальность 
-                        </a>
-                     </li>
-                     <li class="menu-item">
-                        <a href="#">
-                        Моноподы для селфи
-                        </a>
-                     </li>
-                     <li class="menu-item">
-                        <a href="#">
-                        Экшн-камеры
-                        </a>
-                     </li>
-                     <li class="menu-item">
-                        <a href="#">
-                        Фитнес-браслеты
-                        </a>
-                     </li>
-                     <li class="menu-item">
-                        <a href="#">
-                        Умные часы
-                        </a>
-                     </li>
-                     <li class="menu-item">
-                        <a href="#">
-                        Квадрокоптер
-                        </a>
-                     </li>
-                  </ul>
-               </li>
-               <li class="navigation-item">
-                  <a href="#">
-                  Доставка
-                  </a>
-               </li>
-               <li class="navigation-item">
-                  <a href="#">
-                  Гарантия
-                  </a>
-               </li>
-               <li class="navigation-item">
-                  <a href="#">
-                  Контакты
-                  </a>
-               </li>
-            </ul>
-         </nav>
-         <div class="user-navigation">
-            <div class="search-field">
-               <label class="label-search">
-               <span class="visually-hidden">Поиск</span>
-               <input type="search" name="search" class="input-search" placeholder="Поиск по сайту">
-               </label>
-            </div>
-            <div class="login">
-               <a href="#">Войти</a>
-            </div>
-            <div class="compare">
-               <a href="#">Сравнить</a>
-            </div>
-            <div class="shop">
-               <a href="#">Корзина</a>
+      <header class="main-header">
+         <div class="container">
+           <div class="navigation-wrapper">
+            <nav class="site-navigation">
+               <a class="logo-header">
+               <img src="img/logo.png" width="171" height="43" alt="Логотип магазина DEVICE">
+               </a>
+               <ul class="navigation-list">
+                  <li class="navigation-item">
+                     <a href="#">
+                     Каталог товаров
+                     </a>
+                     <ul class="menu-list">
+                        <li class="menu-item">
+                           <a href="#">
+                           Виртуальная реальность 
+                           </a>
+                        </li>
+                        <li class="menu-item">
+                           <a href="#">
+                           Моноподы для селфи
+                           </a>
+                        </li>
+                        <li class="menu-item">
+                           <a href="#">
+                           Экшн-камеры
+                           </a>
+                        </li>
+                        <li class="menu-item">
+                           <a href="#">
+                           Фитнес-браслеты
+                           </a>
+                        </li>
+                        <li class="menu-item">
+                           <a href="#">
+                           Умные часы
+                           </a>
+                        </li>
+                        <li class="menu-item">
+                           <a href="#">
+                           Квадрокоптер
+                           </a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="navigation-item">
+                     <a href="#">
+                     Доставка
+                     </a>
+                  </li>
+                  <li class="navigation-item">
+                     <a href="#">
+                     Гарантия
+                     </a>
+                  </li>
+                  <li class="navigation-item">
+                     <a href="#">
+                     Контакты
+                     </a>
+                  </li>
+               </ul>
+            </nav>
+            <div class="user-navigation">
+               <div class="search-field">
+                    <form action="https://echo.htmlacademy.ru/" method="get">
+                  <label class="label-search" for="search-field">
+                  <span class="visually-hidden">Поиск</span>
+                  </label>
+                  <input type="search" name="search" id="search-field" class="input-search" placeholder="Поиск по сайту">                 
+                  <button type="button" class="button-search">Найти</button>
+                 </form>
+               </div>
+               <div class="login">
+                  <a href="#">Войти</a>
+               </div>
+               <div class="compare">
+                  <a href="#">Сравнить</a>
+               </div>
+               <div class="shop">
+                  <a href="#">Корзина</a>
+               </div>
             </div>
          </div>
+        </div>
       </header>
       <main class="inner-main">
       	<h1>Моноподы для селфи</h1>
       	<ul class="breadcrumbs-list">
       		<li class="breadcrumbs-item">
-      			<a href="#">Главная</a>
+      			<a href="index.html">Главная</a>
       		</li>
       		<li class="breadcrumbs-item">
       			<a href="#">Каталог товаров</a>
@@ -155,7 +162,7 @@
       					<input type="radio" class="input-radio" name="bluetooth-field" id="bluetooth-field-no" value="no">
       				</p>
       			</fieldset>
-      			<button class="button filter-button" type="button">Паказать</button>
+      			<button class="button filter-button" type="submit">Показать</button>
       		</form>
       	</section>
       	<section class="catalog">
@@ -175,14 +182,16 @@
       	  	</ul>
       	  	<ul class="sort-arrows">
       	  	  <li class="sort-arrows-item">
-      	  	  	<button type="button" area-label="сортировка к большему">
+      	  	  	<a href="#" class="button-arrows-active">
+                  <span class="visually-hidden">Сортировка к большему</span>
       	  	  		<svg width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 14h11L8.5 4 3 14z" fill="#000"/></svg>
-      	  	  	</button>
+      	  	  	</a>
       	  	  </li>
       	  	  <li class="sort-arrows-item">
-      	  	  	<button type="button" class="button-arrows-active" area-label="сортировка к меньшему">
+      	  	  	<a href="#" class="button-arrows-active">
+                  <span class="visually-hidden">Сортировка к меньшему</span>
       	  	  		<svg width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 4H3l5.5 10L14 4z" fill="#000"/></svg>
-      	  	  	</button>
+      	  	  	</a>
       	  	  </li>
       	  	</ul>
       	  </div>
