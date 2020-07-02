@@ -326,6 +326,7 @@ img {
 .site-navigation .navigation-list {
   display: flex;
   justify-content: space-between;
+  position: relative;
   margin: 0;
   margin-top: 37px;
   padding: 0;
@@ -335,8 +336,51 @@ img {
   background-color: tomato;
 }
 
-.navigation-item {
+.catalog-link {
+  position: relative;
 
+  padding-right: 10px;
+
+  min-width: 230px;
+
+  letter-spacing: 2px;
+
+  background-color: teal;
+}
+
+.catalog-link:hover ~ .menu-list-wrapper {
+  display: block;
+}
+
+.navigation-item:nth-child(2) {
+  margin-left: auto;
+}
+
+.navigation-item:nth-child(3) {
+  margin-left: 41px;
+}
+
+.navigation-item:last-child {
+  margin-left: 111px;
+}
+
+.navigation-item::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  right: 0;
+
+  width: 22px;
+  height: 22px;
+
+  background-image: url("../img/icon_plus.svg");
+  background-repeat: no-repeat;
+}
+
+.navigation-item:nth-child(2) > a,
+.navigation-item:nth-child(3) > a,
+.navigation-item:last-child > a {
+  letter-spacing: 3px;
 }
 
 .navigation-item > a {
@@ -348,13 +392,31 @@ img {
   color: var(--basicBlack);
 }
 
-.navigation-item .menu-list {
-  display: block;
+.menu-list-wrapper {
+  display: none;
+}
 
+.navigation-item .menu-list {
+  display: flex;
+  
+  flex-wrap: wrap;
+  position: absolute;
+  top: 25px;
+  left: -60px;
   margin: 0;
   padding: 0;
-
+  padding-left: 60px;
+  padding-right: 60px;
+  max-width: 700px;
   list-style: none;
+
+  background-color: teal;
+}
+
+.menu-item {
+  width: 200px;
+
+  border: 1px solid black;
 }
 
 .menu-list a {
