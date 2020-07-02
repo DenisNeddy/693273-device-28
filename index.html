@@ -16,7 +16,7 @@
                </a>
                <ul class="navigation-list">
                   <li class="navigation-item">
-                     <a>
+                     <a href="#">
                      Каталог товаров
                      </a>
                      <ul class="menu-list">
@@ -71,12 +71,13 @@
             </nav>
             <div class="user-navigation">
                <div class="search-field">
+               	  <form action="https://echo.htmlacademy.ru/" method="get">
                   <label class="label-search" for="search-field">
                   <span class="visually-hidden">Поиск</span>
                   </label>
-                  <input type="search" name="search" id="search-field" class="input-search" placeholder="Поиск по сайту">
-                  
+                  <input type="search" name="search" id="search-field" class="input-search" placeholder="Поиск по сайту">                 
                   <button type="button" class="button-search">Найти</button>
+                 </form>
                </div>
                <div class="login">
                   <a href="#">Войти</a>
@@ -404,7 +405,7 @@
       </footer>
       <div class="modal">
          <button type="button" class="modal-close" area-label="Закрыть форму">х</button>
-         <form action="https://echo.htmlacademy.ru/" method="past">
+         <form action="https://echo.htmlacademy.ru/" method="post">
             <p class="input-group">
                <label class="label-form" for="login-field">Ваше имя:</label>
                <input type="text" class="input-field" name="login" id="login-field" placeholder="Имя Фамилия">
