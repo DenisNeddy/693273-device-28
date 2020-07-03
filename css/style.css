@@ -507,20 +507,38 @@ img {
 .slider-item:nth-child(1) {
   display: flex;
   justify-content: flex-end;
-
-
 }
 
 .slider-item:nth-child(1) img {
   margin-bottom: 16px;
   margin-right: 127px;
+
+  width: 384px;
+  height: 486px;
+}
+
+.slider-item:nth-child(2) img {
+  margin-top: 22px;
+  margin-right: 138px;
+
+   width: 345px;
+   height: 485px;
+}
+
+.slider-item:nth-child(3) img {
+  margin-top: 81px;
+  margin-right: 43px;
+
+  width: 526px;
+  height: 334px;
+  
 }
 
 .slider-content {
   position: relative;
   margin-top: 25px;
   max-width: 560px;  
-  background-color: teal;
+  background-color: transparent;
 }
 
 .slider-pagination {
@@ -556,8 +574,6 @@ img {
   background-repeat: no-repeat;
 }
 
-
-
 .slider-content::after {
   content: "";
   display: block;
@@ -590,6 +606,46 @@ img {
   z-index: -1;
 }
 
+.slider-item:nth-child(2) .slider-content::before {
+  content: "02";
+  
+  position: absolute;
+  top: -46px;
+  right: 48px;
+  
+  margin: 0;
+  padding: 0;
+
+  font-size: 179px;
+  line-height: 219px;
+  font-family: 'Gilroy', 'Arial', sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+
+  color: var(--basicWhite);
+  z-index: -1;
+}
+
+.slider-item:nth-child(3) .slider-content::before {
+  content: "03";
+  
+  position: absolute;
+  top: -46px;
+  right: 48px;
+  
+  margin: 0;
+  padding: 0;
+
+  font-size: 179px;
+  line-height: 219px;
+  font-family: 'Gilroy', 'Arial', sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+
+  color: var(--basicWhite);
+  z-index: -1;
+}
+
 .slider-content h3 {
   margin: 0;
   margin-top: 67px;
@@ -601,11 +657,14 @@ img {
   z-index: 1;
 }
 
-
-
 .slider-item:first-child h3 {
  padding-right: 170px; 
 }
+
+.slider-item:nth-child(2) h3 {
+ padding-right: 170px; 
+}
+
 
 .slider-content p {
   margin-top: 27px;
@@ -617,6 +676,11 @@ img {
 
 .slider-item:nth-child(1) p {
   padding-right: 80px;
+}
+
+.slider-item:nth-child(2) p,
+.slider-item:nth-child(3) p {
+  padding-right: 107px;
 }
 
 .button {
@@ -682,13 +746,19 @@ img {
   padding: 0;
   margin: 0;
   margin-top: 34px;
-  
-
 }
 
 .slider-description dl {
   max-width: 186px;
   margin-right: 63px;
+}
+
+.slider-item:nth-child(3) dl{
+  margin-right: 27px;
+}
+
+.slider-item:nth-child(3) dl:last-child {
+  margin-right: 0;
 }
 
 .slider-description dl:last-child {
