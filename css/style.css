@@ -687,8 +687,6 @@ img {
   display: inline-block;
   position: relative;
 
-  margin-top: 37px;
-
   font-size: 18px;
   line-height: 22px;
   font-family: 'Gilroy', 'Arial', sans-serif;
@@ -704,7 +702,7 @@ img {
 }
 
 .button-slider {
-  
+  margin-top: 37px;
   padding-left: 44px;
   padding-right: 42px;
   padding-top: 9px;
@@ -783,5 +781,130 @@ img {
   letter-spacing: 0.1em;
 }
 
+.popular-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  margin-top: 104px;
+  padding: 0;
 
+  list-style: none;
+}
 
+.popular-item {
+  width: 160px;
+}
+
+.popular-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 160px;
+  background-color: var(--specialYellow);
+
+  cursor: pointer;
+}
+
+.popular-item a {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 22px;
+  font-family: 'Gilroy', 'Arial', sans-serif;
+  font-weight: 800;
+  color: var(--basicBlack);
+  vertical-align: middle;
+}
+
+.popular-item h3 {
+  margin: 0;
+  margin-top: 35px;
+}
+
+.popular-image-wrapper:hover,
+.popular-image-wrapper:focus {
+  background-color: var(--specialYellowDark);
+}
+
+.popular-image-wrapper:active img {
+  opacity: 0.3;
+}
+
+.popular-item:active a {
+  color: var(--specialBlack03);
+}
+
+.services {
+  margin-top: 200px;
+  background-color: var(--lightGrey);
+}
+
+.services-wrapper {
+  display: flex;
+
+  margin-top: -20px;
+
+  min-height: 320px;
+  
+}
+
+.services-button-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin: 0;
+  padding: 0;
+  
+  width: 277px;
+  list-style: none;
+
+  border-right: 7px solid var(--basicBlack);
+
+  background-color: tomato;
+}
+
+.services-button {
+  width: 160px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  border: none;
+  background-color: transparent;
+}
+
+.service-button-active {
+  padding-left: 24px;
+  padding-right: 100%;
+  color: var(--specialYellow);
+  background-color: var(--basicBlack);
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+.services-button-item {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.services-button-item:last-child {
+  margin-bottom: 0;
+}
+
+.services-content-list {
+  margin: 0;
+  padding: 0;
+
+  max-width: 876px;
+
+  list-style: none;
+
+  background-color: teal;
+}
+
+.services-content-item {
+  display: none;
+}
+
+.services-content-item:nth-child(1) {
+  display: block;
+}
