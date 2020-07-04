@@ -872,15 +872,6 @@ img {
   background-color: transparent;
 }
 
-.service-button-active {
-  padding-left: 24px;
-  padding-right: 100%;
-  color: var(--specialYellow);
-  background-color: var(--basicBlack);
-  box-sizing: border-box;
-  z-index: 2;
-}
-
 .services-button-item {
   width: 100%;
   margin-bottom: 25px;
@@ -892,9 +883,10 @@ img {
 
 .services-content-list {
   margin: 0;
+  margin-left: auto;
   padding: 0;
 
-  max-width: 876px;
+  max-width: 760px;
 
   list-style: none;
 
@@ -905,6 +897,52 @@ img {
   display: none;
 }
 
-.services-content-item:nth-child(1) {
+.services-content-item:nth-child(3) {
   display: block;
+}
+
+.services-content-item h3 {
+  font-size: 47px;
+  line-height: 58px;
+  font-family: 'Gilroy', 'Arial', sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+}
+
+.services-content-item p {
+  margin-top: 40px;
+
+  font-size: 15px;
+  line-height: 28px;
+
+}
+
+.services-content-item:nth-child(1) p {
+  padding-right: 310px;
+}
+
+.services-content-item:nth-child(2) p {
+  padding-right: 270px;
+}
+
+.services-content-item:nth-child(3) p {
+  padding-right: 300px;
+}
+
+.services-content-item:nth-child(1) {
+  background-image: url("../img/delivery.png");
+  background-repeat: no-repeat;
+  background-position: 100% 10%;
+}
+
+.services-content-item:nth-child(2) {
+  background-image: url("../img/warranty.png");
+  background-repeat: no-repeat;
+  background-position: 100% 10%;
+}
+
+.services-content-item:nth-child(3) {
+  background-image: url("../img/credit.png");
+  background-repeat: no-repeat;
+  background-position: 100% 10%;
 }
