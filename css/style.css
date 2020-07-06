@@ -724,18 +724,16 @@ img {
   z-index: -1;
 }
 
-/*
-
-.button:hover::before,
-.button:focus::before {
-  height: 100%; 
+.button-slider:hover::before,
+.button-slider:focus::before {
+  height: 100%;
   top: 0;
 }
 
-.button:active {
+.button-slider:active {
   color: var(--specialBlack03);
 }
-*/
+
 
 .button-slider:hover {
   height: auto;
@@ -840,16 +838,35 @@ img {
 }
 
 .services {
-  margin-top: 200px;
+  position: relative;
+
+  margin-top: 105px;
   background-color: var(--lightGrey);
+}
+
+.services::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100px;
+
+  background-color: var(--basicWhite);
+
+  z-index: 1;
 }
 
 .services-wrapper {
   display: flex;
 
+
   margin-top: -20px;
 
   min-height: 320px;
+  z-index: 2;
   
 }
 
@@ -861,25 +878,12 @@ img {
   margin: 0;
   padding: 0;
   
-  width: 277px;
+  width: 284px;
   list-style: none;
 
   border-right: 7px solid var(--basicBlack);
 
-  background-color: tomato;
-}
-
-.services-button::before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 15px;
-
-  width: 100%;
-  height: 8px;
-  background-color: var(--specialYellowDark);
-  z-index: -1;
+  z-index: 2;
 }
 
 .services-button {
@@ -890,12 +894,105 @@ img {
 
   background-color: transparent;
   border: none;
+  z-index: 2;
+}
+
+.services-button:not(.services-button-active) {
+  cursor: pointer;
+}
+
+.services-button:not(.services-button-active)::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 15px;
+
+  width: 100%;
+  height: 8px;
+
+  background-color: var(--specialYellowDark);
+  z-index: -1;
+}
+
+.services-button-active::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  
+  background-color: var(--basicBlack);
+}
+
+.services-button:not(.services-button-active):hover::before,
+.services-button:not(.services-button-active):focus::before {
+  height: 100%;
+  top: 0;
+}
+
+.services-button:not(.services-button-active):active {
+  color: var(--specialYellow);
+  height: 100%;
+  top: 0;
+}
+
+.services-button-item:nth-child(1) .services-button:not(.services-button-active):active {
+  padding-left: 18px;
+  padding-right: 266px;
+}
+
+.services-button-item:nth-child(2) .services-button:not(.services-button-active):active {
+  padding-left: 20px;
+  padding-right: 260px;
+}
+
+.services-button-item:nth-child(3) .services-button:not(.services-button-active):active {
+  padding-left: 35px;
+  padding-right: 247px;
+}
+
+
+.services-button:not(.services-button-active):active::before {
+  background-color: var(--basicBlack);
+}
+
+li:nth-child(1) .services-button-active {
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 18px;
+  padding-right: 266px;
+
+  color: var(--specialYellow);
+}
+
+li:nth-child(2) .services-button-active {
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 20px;
+  padding-right: 260px;
+
+  color: var(--specialYellow);
+}
+
+li:nth-child(3) .services-button-active {
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 35px;
+  padding-right: 247px;
+
+  color: var(--specialYellow);
 }
 
 .services-button-item {
-  margin-bottom: 25px;
+  margin-bottom: 22px;
 
   width: 100%;
+}
+
+.service-button-item:first-child {
+  margin-top: 14px;
 }
 
 .services-button-item:last-child {
@@ -911,18 +1008,20 @@ img {
 
   list-style: none;
 
-  background-color: teal;
+  z-index: 2;
 }
 
 .services-content-item {
   display: none;
 }
 
-.services-content-item:nth-child(3) {
+.services-content-item:nth-child(1) {
   display: block;
 }
 
 .services-content-item h3 {
+  margin: 0;
+  padding-top: 71px;
   font-size: 47px;
   line-height: 58px;
   font-family: 'Gilroy', 'Arial', sans-serif;
@@ -935,37 +1034,38 @@ img {
 
   font-size: 15px;
   line-height: 28px;
+  letter-spacing: 0.1em;
 
 }
 
 .services-content-item:nth-child(1) p {
-  padding-right: 310px;
+  padding-right: 265px;
 }
 
 .services-content-item:nth-child(2) p {
-  padding-right: 270px;
+  padding-right: 180px;
 }
 
 .services-content-item:nth-child(3) p {
-  padding-right: 300px;
+  padding-right: 220px;
 }
 
 .services-content-item:nth-child(1) {
   background-image: url("../img/delivery.png");
   background-repeat: no-repeat;
-  background-position: 100% 10%;
+  background-position: 620px 60px;
 }
 
 .services-content-item:nth-child(2) {
   background-image: url("../img/warranty.png");
   background-repeat: no-repeat;
-  background-position: 100% 10%;
+  background-position: 100% 52px;
 }
 
 .services-content-item:nth-child(3) {
   background-image: url("../img/credit.png");
   background-repeat: no-repeat;
-  background-position: 100% 10%;
+  background-position: 595px 48px;
 }
 
 .brends-list {
@@ -1049,5 +1149,5 @@ img {
 }
 .contacts {
   min-width: 560px;
-  background-color: tomato;
+ 
 }
