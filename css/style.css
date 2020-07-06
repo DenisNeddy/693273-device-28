@@ -8,7 +8,7 @@
   --basicBlack: #000000;
 
   --basicDark: #363636;
-
+  --specialLightGrey: #f2f2f2;
   --lightGrey: #e5e5e5;
   --basicGrey: #7e7e7e;
   --darkGrey: #464646;
@@ -94,6 +94,7 @@ img {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
+
 }
 
 .visually-hidden {
@@ -837,7 +838,7 @@ img {
 .popular-item:active a {
   color: var(--specialBlack03);
 }
-
+/*
 .services {
   position: relative;
 
@@ -860,16 +861,30 @@ img {
 
   z-index: 1;
 }
+*/
+
+.services {
+  position: relative;
+  margin-top: 83px;
+  
+ 
+  background-color: var(--lightGrey);
+}
+
+.services::before {
+  content: "";
+  display: block;
+  
+  width: 100%;
+  height: 100px;
+   background-color: var(--basicWhite);
+}
 
 .services-wrapper {
   display: flex;
-
-
-  margin-top: -20px;
-
+  margin-top: -100px;
   min-height: 320px;
-  z-index: 2;
-  
+  background-color: transparent; 
 }
 
 .services-button-list {
@@ -884,8 +899,6 @@ img {
   list-style: none;
 
   border-right: 7px solid var(--basicBlack);
-
-  z-index: 2;
 }
 
 .services-button {
@@ -896,7 +909,6 @@ img {
 
   background-color: transparent;
   border: none;
-  z-index: 2;
 }
 
 .services-button:not(.services-button-active) {
@@ -1009,8 +1021,6 @@ li:nth-child(3) .services-button-active {
   max-width: 760px;
 
   list-style: none;
-
-  z-index: 2;
 }
 
 .services-content-item {
@@ -1076,7 +1086,7 @@ li:nth-child(3) .services-button-active {
   flex-wrap: wrap;
   
   margin: 0;
-  margin-top: 92px;
+  margin-top: 161px;
   padding: 0;
 
   list-style: none;
@@ -1596,3 +1606,164 @@ li:nth-child(3) .services-button-active {
 }
 
 
+.modal {
+  display: block;
+  position: absolute;
+  top: 1173px;
+  left: 455px;
+
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 62px;
+  
+  background-color: var(--basicWhite);
+  border-radius: 5px;
+  box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.15);
+  z-index: 4;
+  
+}
+
+.modal-form-wrapper {
+  position: relative;
+  z-index: 3;
+}
+
+.close-button-wrapper {
+  position: relative;
+}
+
+.modal-close-button {
+  display: inline-block;
+  position: absolute;
+  top: -60px;
+  right: -81px;
+  width: 55px;
+  height: 55px;
+
+  background-color: var(--specialYellow);
+
+  vertical-align: middle;
+
+  border: none;
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+.modal-close-button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 30px;
+  height: 30px;
+
+  background-image: url("../img/icon_cross.png");
+
+  transform: translate(-50%,-50%);
+}
+
+.modal-close-button:hover,
+.modal-close-button:focus {
+  background-color: var(--specialYellowDark);
+}
+
+.modal-close-button:active {
+  background-color: var(--specialYellow);
+  opacity: 0.6;
+}
+
+.input-group-wrapper {
+  display: flex;
+  margin-top: 92px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.label-form {
+  margin-bottom: 10px;
+
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 800;
+  font-family: 'Gilroy', 'Arial', sans-serif;
+  color: var(--basicBlack);
+}
+
+.input-field {
+  padding-top: 16px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+
+  width: 360px;
+  background-color: var(--specialLightGrey);
+  border: none;
+  border-radius: 3px;
+  box-sizing: border: box;
+}
+
+.input-field::placeholder {
+  font-size: 14px;
+  line-height: 19px;
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  color: var(--specialBlack03);
+}
+
+.input-group:first-child .input-field {
+  margin-right: 40px;
+}
+
+.input-group:nth-child(3) {
+  margin-top: 20px;
+}
+
+.textarea {
+  padding-top: 16px;
+  padding-left: 20px;
+  font-size: 14px;
+  line-height: 19px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: var(--specialBlack03);
+  background-color: var(--specialLightGrey);
+  border-radius: 3px;
+  border: none;
+}
+
+.form-button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 15px;
+
+  width: 100%;
+  height: 8px;
+  background-color: var(--specialYellowDark);
+  z-index: -1;
+}
+
+.form-button {
+  margin-top: 13px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 32px;
+  padding-right: 37px;
+
+  background-color: transparent;
+  border: none;
+}
+
+.form-button:hover::before,
+.form-button:focus::before  {
+  top: 0;
+  height: 100%;
+}
+
+.form-button:active {
+  color: var(--specialBlack03);
+}
