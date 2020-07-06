@@ -419,21 +419,28 @@
          </div>
       </footer>
       <div class="modal">
-         <button type="button" class="modal-close" aria-label="Закрыть форму">х</button>
-         <form action="https://echo.htmlacademy.ru/" method="post">
+      	<div class="modal-form-wrapper">
+      	 <div class="close-button-wrapper">
+         <button type="button" class="modal-close-button" aria-label="Закрыть форму"></button>
+     </div>
+         <form class="form" action="https://echo.htmlacademy.ru/" method="post">
+            <div class="input-group-wrapper">
             <p class="input-group">
                <label class="label-form" for="login-field">Ваше имя:</label>
                <input type="text" class="input-field" name="login" id="login-field" placeholder="Имя Фамилия">
             </p>
             <p class="input-group">
-               <label class="email-form" for="email-field">Ваш e-mail:</label>
-               <input type="email" class="input-field" name="email" id="email-field" placeholder="email@example.com">
+               <label class="label-form" for="email-field">Ваш e-mail:</label>
+               <input type="email" class="input-field" name="email" id="Email-field" placeholder="email@example.com">
             </p>
+            </div>
             <p class="input-group">
                <label class="label-form" for="comments-field">Текст письма:</label>
-               <textarea name="comments" id="comments-field"></textarea>
+               <textarea class="textarea" name="comments" id="comments-field" rows="12">В свободной форме</textarea>
             </p>
+
             <button type="submit" class="button form-button">Отправить</button>
+        </div>
          </form>
       </div>
    </body>
