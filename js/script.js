@@ -1,5 +1,16 @@
 var modal = document.querySelector('.modal');
 var buttonModalClose = document.querySelector('.modal-close-button');
 var buttonModalOpen = document.querySelector('.contacts-button');
-buttonModalClose.classList.add('red');
+var loginForm = document.querySelector('.login-input');
+
+buttonModalOpen.addEventListener('click', function(evt) {
+ evt.preventDefault();
+ modal.classList.add('open-form');
+ loginForm.focus();
+});
+
+buttonModalClose.addEventListener('click', function(evt) {
+ evt.preventDefault();
+ modal.classList.remove('open-form');
+});
 
