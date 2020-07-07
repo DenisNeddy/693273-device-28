@@ -154,7 +154,7 @@ img {
 .site-navigation .logo-header {
   position: absolute;
   top: -20px;
-  left: 56px;
+  left: 60px;
 }
 
 .site-navigation > a[href]:hover,
@@ -1791,6 +1791,10 @@ li:nth-child(3) .services-button-active {
 
 /*СТРАНИЦА КАТАЛОГА*/
 
+.inner-header .navigation-wrapper {
+  padding-bottom: 47px;
+}
+
 .inner-header .login,
 .inner-header .compare,
 .inner-header .shop {
@@ -1798,33 +1802,22 @@ li:nth-child(3) .services-button-active {
   margin-right: 0;
 }
 
-.inner-header .login-list {
-  display: flex;
-
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
+.inner-header .login-out {
+  margin-top: 39px;
+  margin-left: 20px;
+  margin-right: 63px;
 }
 
-.inner-header .login-item {
-  margin-right: 20px;
-}
-
-.login-item-disabled {
+.login-out a {
+  font-size: 15px;
+  line-height: 20px;
+  color: inherit;
   opacity: 0.6;
 }
 
-.login:hover .login-item-disabled,
-.login:focus .login-item-disabled {
-  opacity: 1;
+.inner-header .compare {
+  margin-right: 45px;
 }
-
-
-.login:active .login-item-disabled {
-  opacity: 1;
-}
-
 
 .inner-header .user-navigation {
   justify-content: space-between;
