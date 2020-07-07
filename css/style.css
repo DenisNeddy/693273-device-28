@@ -148,6 +148,7 @@ img {
   order: -1;
 
   display: flex;
+  flex-wrap: wrap;
 }
 
 .site-navigation .logo-header {
@@ -346,6 +347,7 @@ img {
 
 .site-navigation .navigation-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   position: relative;
   margin: 0;
@@ -579,20 +581,39 @@ img {
 }
 
 .pagination-button {
+  position: relative;
   width: 12px;
   height: 12px;
 
   background-color: transparent;
-  background-image: url("../img/slider-button-empty.svg");
+  background-image: url("../img/slider_button_empty.svg");
   background-repeat: no-repeat;
   border: none;
 
   cursor: pointer;
 }
-
+/*
 .pagination-button-active {
   background-image: url("../img/slider-button.svg");
   background-repeat: no-repeat;
+}
+*/
+
+.pagination-button::before {
+  content: "";
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 12px;
+  height: 12px;
+  background-image: url("../img/slider_button.svg");
+  background-repeat: no-repeat;
+}
+
+.slider-pagination-item:nth-child(1) .pagination-button::before {
+  display: block;
 }
 
 .slider-content::after {
@@ -788,6 +809,7 @@ img {
 
 .popular-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin: 0;
   margin-top: 104px;
@@ -838,30 +860,6 @@ img {
 .popular-item:active a {
   color: var(--specialBlack03);
 }
-/*
-.services {
-  position: relative;
-
-  margin-top: 105px;
-  padding-bottom: 67px;
-  background-color: var(--lightGrey);
-}
-
-.services::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 100px;
-
-  background-color: var(--basicWhite);
-
-  z-index: 1;
-}
-*/
 
 .services {
   position: relative;
@@ -955,16 +953,22 @@ img {
 .services-button-item:nth-child(1) .services-button:not(.services-button-active):active {
   padding-left: 18px;
   padding-right: 266px;
+  border: none;
+  outline: none;
 }
 
-.services-button-item:nth-child(2) .services-button:not(.services-button-active):active {
-  padding-left: 20px;
+.services-button-item:nth-child(2) .services-button:not(.services-button-active):active { 
+  padding-left: 23px;
   padding-right: 260px;
+  border: none;
+  outline: none;
 }
 
 .services-button-item:nth-child(3) .services-button:not(.services-button-active):active {
-  padding-left: 35px;
+  padding-left: 36px;
   padding-right: 247px;
+  border: none;
+  outline: none;
 }
 
 
@@ -1322,6 +1326,7 @@ li:nth-child(3) .services-button-active {
 
 .footer-top {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   border-top: 1px solid transparent;
 }
@@ -1355,7 +1360,7 @@ li:nth-child(3) .services-button-active {
   width: 13px;
   height: 14px;
 
-  background-image: url("../img/icon-user_footer.svg");
+  background-image: url("../img/icon_user_footer.svg");
   background-repeat: no-repeat;
 }
 
@@ -1467,9 +1472,14 @@ li:nth-child(3) .services-button-active {
 }
 
 .footer-middle .adress {
+  display: inline-block;
+
+  max-width: 260px;
+
   font-size: 15px;
   line-height: 20px;
   font-weight: 300;
+  vertical-align: middle;
   color: var(--basicWhite);
 }
 
@@ -1480,14 +1490,15 @@ li:nth-child(3) .services-button-active {
   margin-top: 14px;
   margin-right: 41px;
   padding: 0;
-
+  
+  max-width: 470px;
   list-style: none;
 }
 
 .footer-navigation-item {
   margin-right: 32px;
 }
-
+/
 .footer-navigation-item:last-child {
   margin-right: 0;
 }
@@ -1512,6 +1523,8 @@ li:nth-child(3) .services-button-active {
 }
 
 .phone-number a {
+  max-width: 200px;
+
   font-size: 15px;
   line-height: 20px;
   font-weight: 300;
@@ -1608,9 +1621,9 @@ li:nth-child(3) .services-button-active {
 
 .modal {
   display: block;
-  position: absolute;
-  top: 1173px;
-  left: 455px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
 
   padding-left: 100px;
   padding-right: 100px;
@@ -1618,10 +1631,21 @@ li:nth-child(3) .services-button-active {
   
   background-color: var(--basicWhite);
   border-radius: 5px;
+
   box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.15);
+
+  transform: translate(-50%,-50%);
   z-index: 4;
   
 }
+
+.open-form {
+  display: block;
+}
+.red {
+  max-width: 100px;
+}
+
 
 .modal-form-wrapper {
   position: relative;
