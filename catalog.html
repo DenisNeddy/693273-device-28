@@ -82,7 +82,7 @@
                      </form>
                   </div>
                   <div class="header-user-nav-wrapper">
-                  <div class="login">
+                  <div clasbreas="login">
                      <a href="#">Валентин Петухов</a>
                   </div> 
                   <div class="login-out">
@@ -102,8 +102,9 @@
          </div>
       </header>
       <main class="inner-main">
-         <h1>Моноподы для селфи</h1>
-         <ul class="breadcrumbs-list">
+         <div class="container">
+           <h1>Моноподы для селфи</h1>
+           <ul class="breadcrumbs-list">
             <li class="breadcrumbs-item">
                <a href="index.html">Главная</a>
             </li>
@@ -113,9 +114,13 @@
             <li class="breadcrumbs-item">
                <a>Моноподы для селфи</a>
             </li>
-         </ul>
+           </ul>
+         </div>
+         <div class="container">
+            <div class="catalog-wrapper">
          <section class="filter">
-            <h2>Фильтр:</h2>
+           
+             <h2>Фильтр:</h2>
             <form action="https://echo.htmlacademy.ru/" method="get">
                <fieldset class="price">
                   <legend>Стоимость</legend>
@@ -173,8 +178,10 @@
                </fieldset>
                <button class="button filter-button" type="submit">Показать</button>
             </form>
+           
          </section>
-         <section class="catalog">
+         <section class="inner-catalog">
+          
             <h2 class="visually-hidden"> Каталог товаров моноподов</h2>
             <div class="catalog-sort">
                <p>Сортировка</p>
@@ -279,7 +286,10 @@
                   <a href="#" class="forward">Вперед</a>
                </li>
             </ul>
+         
          </section>
+         </div>
+         </div>
       </main>
       <footer class="main-footer inner-header">
          <div class="footer-top">
