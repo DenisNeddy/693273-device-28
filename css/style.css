@@ -1491,7 +1491,7 @@ li:nth-child(3) .services-button-active {
   margin-right: 41px;
   padding: 0;
   
-  max-width: 470px;
+  max-width: 425px;
   list-style: none;
 }
 
@@ -1523,8 +1523,6 @@ li:nth-child(3) .services-button-active {
 }
 
 .phone-number a {
-  max-width: 200px;
-
   font-size: 15px;
   line-height: 20px;
   font-weight: 300;
@@ -1936,4 +1934,18 @@ li:nth-child(3) .services-button-active {
   background-color: teal;
   z-index: 3;
 
+}
+
+.inner-catalog .catalog-list {
+  display: flex;
+  flex-wrap: wrap; 
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.catalog-cart {
+  
 }
