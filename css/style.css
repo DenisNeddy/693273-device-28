@@ -1620,7 +1620,7 @@ li:nth-child(3) .services-button-active {
 
 
 .modal {
-  display: block;
+  display: none;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -1641,9 +1641,6 @@ li:nth-child(3) .services-button-active {
 
 .open-form {
   display: block;
-}
-.red {
-  max-width: 100px;
 }
 
 
@@ -1733,7 +1730,7 @@ li:nth-child(3) .services-button-active {
 
 .input-field::placeholder {
   font-size: 14px;
-  line-height: 19px;
+  line-height: 20px;
   font-family: 'Open Sans', 'Arial', sans-serif;
   color: var(--specialBlack03);
 }
@@ -1750,7 +1747,7 @@ li:nth-child(3) .services-button-active {
   padding-top: 16px;
   padding-left: 20px;
   font-size: 14px;
-  line-height: 19px;
+  line-height: 20px;
   font-family: "Open Sans", "Arial", sans-serif;
   color: var(--specialBlack03);
   background-color: var(--specialLightGrey);
@@ -1790,4 +1787,50 @@ li:nth-child(3) .services-button-active {
 
 .form-button:active {
   color: var(--specialBlack03);
+}
+
+/*СТРАНИЦА КАТАЛОГА*/
+
+.inner-header .login,
+.inner-header .compare,
+.inner-header .shop {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.inner-header .login-list {
+  display: flex;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.inner-header .login-item {
+  margin-right: 20px;
+}
+
+.login-item-disabled {
+  opacity: 0.6;
+}
+
+.login:hover .login-item-disabled,
+.login:focus .login-item-disabled {
+  opacity: 1;
+}
+
+
+.login:active .login-item-disabled {
+  opacity: 1;
+}
+
+
+.inner-header .user-navigation {
+  justify-content: space-between;
+}
+
+.inner-header .header-user-nav-wrapper {
+  display: flex;
+  flex-wrap: wrap;
 }
