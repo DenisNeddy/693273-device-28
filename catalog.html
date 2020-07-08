@@ -121,7 +121,8 @@
                   <section class="filter">
                      <h2>Фильтр:</h2>
                      <form action="https://echo.htmlacademy.ru/" method="get">
-                        <fieldset class="price">
+                        <div  class="price">
+                        <fieldset>
                            <legend>Стоимость</legend>
                            <div class="range-filter">
                               <div class="range-controls">
@@ -141,40 +142,51 @@
                               </div>
                            </div>
                         </fieldset>
-                        <fieldset class="color">
+                        </div>
+                      <div class="color">
+                        <fieldset>
                            <legend>Цвет</legend>
                            <p class="checkbox-group">
+                               <input type="checkbox" class="visually-hidden input-checkbox" name="checkbox-black" id="checkbox-field-black" checked>
                               <label class="label-checkbox" for="checkbox-field-black">Черный</label>
-                              <input type="checkbox" class="input-checkbox" name="checkbox-black" id="checkbox-field-black" checked>
+                             
                            </p>
                            <p class="checkbox-group">
+                              <input type="checkbox" class="visually-hidden input-checkbox" name="checkbox-white" id="checkbox-field-white">
                               <label class="label-checkbox" for="checkbox-field-white">Белый</label>
-                              <input type="checkbox" class="input-checkbox" name="checkbox-white" id="checkbox-field-white">
+                              
                            </p>
                            <p class="checkbox-group">
+                              <input type="checkbox" class="visually-hidden input-checkbox" name="checkbox-blue" id="checkbox-field-blue" checked>
                               <label class="label-checkbox" for="checkbox-field-blue">Синий</label>
-                              <input type="checkbox" class="input-checkbox" name="checkbox-blue" id="checkbox-field-blue" checked>
+                              
                            </p>
                            <p class="checkbox-group">
+                              <input type="checkbox" class="visually-hidden input-checkbox" name="checkbox-red" id="checkbox-field-red" checked>
                               <label class="label-checkbox" for="checkbox-field-red">Красный</label>
-                              <input type="checkbox" class="input-checkbox" name="checkbox-red" id="checkbox-field-red" checked>
+                              
                            </p>
                            <p class="checkbox-group">
+                               <input type="checkbox" class="visually-hidden input-checkbox" name="checkbox-pink" id="checkbox-field-pink">
                               <label class="label-checkbox" for="checkbox-field-pink">Розовый</label>
-                              <input type="checkbox" class="input-checkbox" name="checkbox-pink" id="checkbox-field-pink">
+                             
                            </p>
                         </fieldset>
-                        <fieldset class="bluetooth">
+                        </div>
+                        <div  class="bluetooth">
+                        <fieldset>
                            <legend>Bluetooth</legend>
                            <p class="radio-group">
-                              <label class="label-radio" for="bluetooth-field-yes">Есть</label>
-                              <input type="radio" class="input-radio" name="bluetooth-field" id="bluetooth-field-yes" value="yes" checked>
+                              <input type="radio" class="visually-hidden input-radio" name="bluetooth-field" id="bluetooth-field-yes" value="yes" checked>
+                              <label class="label-radio" for="bluetooth-field-yes">Есть</label> 
                            </p>
                            <p class="radio-group">
+                               <input type="radio" class="visually-hidden input-radio" name="bluetooth-field" id="bluetooth-field-no" value="no">
                               <label class="label-radio" for="bluetooth-field-no">Нет</label>
-                              <input type="radio" class="input-radio" name="bluetooth-field" id="bluetooth-field-no" value="no">
+                             
                            </p>
                         </fieldset>
+                     </div>
                         <button class="button filter-button" type="submit">Показать</button>
                      </form>
                   </section>
