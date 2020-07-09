@@ -100,7 +100,6 @@ img {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
-
 }
 
 .visually-hidden {
@@ -114,7 +113,6 @@ img {
   width: 1160px;
   margin: 0 auto;
 }
-
 
 .button {
   display: inline-block;
@@ -132,7 +130,6 @@ img {
   letter-spacing: 0.2em;
   z-index: 1; 
 }
-
 
 .main-header {
   margin-top: 40px;
@@ -2158,14 +2155,20 @@ li:nth-child(3) .services-button-active {
   cursor: pointer;
 }
 
-.input-checkbox:hover + label::before,
-.input-checkbox:hover + label::after,
-.input-checkbox:focus + label::before,
-.input-checkbox:focus + label::after {
+.input-checkbox:hover + label::before {
   opacity: 0.3;
 }
 
+.input-checkbox:checked:hover + label::after {
+  opacity: 0.3;
+}
+
+
 .input-checkbox:active + label::before {
+  opacity: 1;
+}
+
+.input-checkbox:checked:active + label::after {
   opacity: 1;
 }
 
@@ -2203,6 +2206,10 @@ li:nth-child(3) .services-button-active {
   padding-left: 40px;
 }
 
+.label-radio {
+  cursor: pointer;
+}
+
 .input-radio + label::before {
   content: "";
   display: block;
@@ -2234,8 +2241,7 @@ li:nth-child(3) .services-button-active {
 
   cursor: pointer;
 }
-.input-radio:checked:hover + label::after,
-.input-radio:checked:focus + label::after {
+.input-radio:checked:hover + label::after {
   opacity: 0.6;
 }
 
@@ -2244,8 +2250,7 @@ li:nth-child(3) .services-button-active {
 }
 
 
-.input-radio:hover + label::before,
-.input-radio:focus + label::before {
+.input-radio:hover + label::before {
   opacity: 0.6;
 }
 
