@@ -11,6 +11,7 @@
 
   --basicDark: #363636;
   
+  --inputGreyDark: #eaeaea;
   --toggleGrey: #c4c4c4;
   --specialLightGrey: #f2f2f2;
   --lightGrey: #e5e5e5;
@@ -540,9 +541,12 @@ img {
   justify-content: flex-end;
 }
 
+.slider-item {
+  height: 507px;
+}
 
 .slider-item:nth-child(1) img {
-  margin-bottom: 20px;
+  margin-bottom: 21px;
   margin-right: 127px;
 
   width: 384px;
@@ -576,7 +580,7 @@ img {
 .slider-pagination {
   display: flex;
   position: absolute;
-  bottom: 145px;
+  bottom: 150px;
   right: 88px;
   z-index: 20000;
 }
@@ -642,7 +646,7 @@ img {
   
   position: absolute;
   top: -46px;
-  right: 48px;
+  right: 52px;
   
   margin: 0;
   padding: 0;
@@ -1727,7 +1731,50 @@ li:nth-child(3) .services-button-active {
   border: none;
   border-radius: 3px;
   box-sizing: border: box;
+  outline: none;
 }
+
+.input-field:hover {
+  padding-top: 14px;
+  padding-bottom: 13px;
+  padding-left: 18px;
+
+  width: 360px;
+
+  background-color: var(--inputGreyDark);
+  border: 2px solid var(--inputGreyDark);
+  border-radius: 3px;
+  box-sizing: border: box;
+}
+
+.input-field:focus {
+  padding-top: 14px;
+  padding-bottom: 13px;
+  padding-left: 18px;
+
+  width: 360px;
+
+  background-color: var(--basicWhite);
+  border: 2px solid var(--specialYellowDark);
+  border-radius: 3px;
+  box-sizing: border: box;
+  outline: none;
+}
+
+.input-error {
+  padding-top: 14px;
+  padding-bottom: 13px;
+  padding-left: 18px;
+
+  width: 360px;
+
+  background-color: var(--specialRed);
+  border: 2px solid var(--specialRed);
+  border-radius: 3px;
+  box-sizing: border: box;
+  outline: none;
+}
+
 
 .input-field::placeholder {
   font-size: 14px;
@@ -1753,7 +1800,20 @@ li:nth-child(3) .services-button-active {
   color: var(--specialBlack03);
   background-color: var(--specialLightGrey);
   border-radius: 3px;
-  border: none;
+  border:  2px solid  var(--specialLightGrey);
+  outline: none;
+}
+
+.textarea:hover {
+  background-color: var(--inputGreyDark);
+}
+
+.textarea:focus {
+  background-color: var(--basicWhite);
+  border: 2px solid var(--specialYellowDark);
+  border-radius: 3px;
+  box-sizing: border: box;
+  outline: none;
 }
 
 .form-button::before {
@@ -1778,6 +1838,8 @@ li:nth-child(3) .services-button-active {
 
   background-color: transparent;
   border: none;
+
+  cursor: pointer;
 }
 
 .form-button:hover::before,
