@@ -1,7 +1,6 @@
 var modal = document.querySelector('.modal');
 var buttonModalClose = modal.querySelector('.modal-close-button');
 var buttonModalOpen = document.querySelector('.contacts-button');
-var loginForm = document.querySelector('.login-input');
 var login = document.querySelector('[name=login]');
 var email = document.querySelector('[name=email]');
 var input = document.querySelector('.input-field');
@@ -20,7 +19,7 @@ buttonModalClose.addEventListener('click', function(evt) {
 form.addEventListener('submit', function (evt) {
   if(!login.value || !email.value) {
      evt.preventDefault();
-      input.classList.remove('input-error');
+     input.classList.remove('input-error');
      
      input.classList.add('input-error');   
   }   
