@@ -1,13 +1,11 @@
-var paginationButtons = document.querySelectorAll(".pagination-button");
+var paginationButton = document.querySelectorAll(".pagination-button");
 var slider = document.querySelectorAll(".slider-item")
 
 
-
 paginationButton[0].addEventListener("click", function(evt) {
-  for(let slader of sliders) {
   evt.preventDefault();
-  slider.classList.toggle("open-slider");
-  }
+  slider[2].classList.remove("open-slider");
+  slider[0].classList.add("open-slider");
 });
 
 paginationButton[1].addEventListener("click", function(evt) {
