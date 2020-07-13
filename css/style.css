@@ -54,8 +54,8 @@
 
 @font-face {
 font-family: 'Gilroy';
-src: url('gilroylight.woff2') format('woff2'),
-url('gilroylight.woff') format('woff');
+src: url('../fonts/gilroylight.woff2') format('woff2'),
+url('../fonts/gilroylight.woff') format('woff');
 font-weight: 300;
 }
 
@@ -63,9 +63,8 @@ font-weight: 300;
 font-family: 'Gilroy';
 font-style: normal;
 font-weight: 800;
-src: url('gilroyextrabold.woff2') format('woff2'),
-     url('gilroyextrabold.woff') format('woff');
-
+src: url('../fonts/gilroyextrabold.woff2') format('woff2'),
+     url('../fonts/gilroyextrabold.woff') format('woff');
 }
 
 body {
@@ -530,13 +529,8 @@ img {
 .slider-item {
   display: none;
 }
-/*
+
 .slider-item:nth-child(1) {
-  display: flex;
-  justify-content: flex-end;
-}
-*/
-.open-slider {
   display: flex;
   justify-content: flex-end;
 }
@@ -605,12 +599,6 @@ img {
 
   cursor: pointer;
 }
-/*
-.pagination-button-active {
-  background-image: url("../img/slider-button.svg");
-  background-repeat: no-repeat;
-}
-*/
 
 .pagination-button::before {
   content: "";
@@ -626,6 +614,10 @@ img {
 }
 
 .slider-pagination-item:nth-child(1) .pagination-button::before {
+  display: block;
+}
+
+.slider-pagination > li:nth-child(1).pagination-button:checked ~ .slider-list > li:nth-child(1) {
   display: block;
 }
 
@@ -720,7 +712,6 @@ img {
  padding-right: 170px; 
 }
 
-
 .slider-content p {
   margin-top: 27px;
 
@@ -737,7 +728,6 @@ img {
 .slider-item:nth-child(3) p {
   padding-right: 107px;
 }
-
 
 .button-slider {
   margin-top: 37px;
@@ -770,7 +760,6 @@ img {
   color: var(--specialBlack03);
 }
 
-
 .slider-description {
   display: flex;
   
@@ -781,8 +770,9 @@ img {
 }
 
 .slider-description dl {
-  max-width: 186px;
   margin-right: 63px;
+
+  max-width: 186px;  
 }
 
 .slider-item:nth-child(3) dl{
@@ -799,6 +789,7 @@ img {
 
 .slider-description dt {
   margin-bottom: 15px;
+
   font-size: 36px;
   line-height: 42px;
   font-family: 'Gilroy', 'Arial', sans-serif;
@@ -808,6 +799,7 @@ img {
 
 .slider-description dd {
   margin: 0;
+
   font-size: 13px;
   line-height: 15px;
   font-family: 'Gilroy', 'Arial', sans-serif;
@@ -819,8 +811,9 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
   margin: 0;
-  margin-top: 104px;
+  margin-top: 96px;
   padding: 0;
 
   list-style: none;
@@ -834,6 +827,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+
   width: 160px;
   height: 160px;
   background-color: var(--specialYellow);
@@ -843,6 +837,7 @@ img {
 
 .popular-item a {
   display: inline-block;
+
   font-size: 18px;
   line-height: 22px;
   font-family: 'Gilroy', 'Arial', sans-serif;
@@ -871,9 +866,9 @@ img {
 
 .services {
   position: relative;
-  margin-top: 83px;
+
+  margin-top: 88px;
   
- 
   background-color: var(--lightGrey);
 }
 
@@ -883,13 +878,16 @@ img {
   
   width: 100%;
   height: 100px;
-   background-color: var(--basicWhite);
+
+  background-color: var(--basicWhite);
 }
 
 .services-wrapper {
   display: flex;
+
   margin-top: -100px;
   min-height: 320px;
+
   background-color: transparent; 
 }
 
@@ -898,10 +896,12 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: start;
+
   margin: 0;
   padding: 0;
   
   width: 284px;
+
   list-style: none;
 
   border-right: 7px solid var(--basicBlack);
@@ -915,6 +915,8 @@ img {
 
   background-color: transparent;
   border: none;
+
+  outline: none;
 }
 
 .services-button:not(.services-button-active) {
@@ -941,10 +943,12 @@ img {
   position: absolute;
   top: 0;
   left: 0;
+
   height: 100%;
   
   background-color: var(--basicBlack);
 }
+
 
 .services-button:not(.services-button-active):hover::before,
 .services-button:not(.services-button-active):focus::before {
@@ -953,14 +957,16 @@ img {
 }
 
 .services-button:not(.services-button-active):active {
-  color: var(--specialYellow);
-  height: 100%;
   top: 0;
+  height: 100%;
+
+  color: var(--specialYellow); 
 }
 
 .services-button-item:nth-child(1) .services-button:not(.services-button-active):active {
   padding-left: 18px;
   padding-right: 266px;
+
   border: none;
   outline: none;
 }
@@ -968,6 +974,7 @@ img {
 .services-button-item:nth-child(2) .services-button:not(.services-button-active):active { 
   padding-left: 23px;
   padding-right: 260px;
+
   border: none;
   outline: none;
 }
@@ -975,6 +982,7 @@ img {
 .services-button-item:nth-child(3) .services-button:not(.services-button-active):active {
   padding-left: 36px;
   padding-right: 247px;
+
   border: none;
   outline: none;
 }
@@ -1046,6 +1054,7 @@ li:nth-child(3) .services-button-active {
 .services-content-item h3 {
   margin: 0;
   padding-top: 71px;
+
   font-size: 47px;
   line-height: 58px;
   font-family: 'Gilroy', 'Arial', sans-serif;
@@ -1059,7 +1068,6 @@ li:nth-child(3) .services-button-active {
   font-size: 15px;
   line-height: 28px;
   letter-spacing: 0.1em;
-
 }
 
 .services-content-item:nth-child(1) p {
@@ -1154,7 +1162,6 @@ li:nth-child(3) .services-button-active {
   letter-spacing: 0.2em; 
 }
 
-
 .about-us p {
   font-size: 15px;
   line-height: 28px;
@@ -1212,12 +1219,14 @@ li:nth-child(3) .services-button-active {
 
   width: 100%;
   height: 8px;
+
   background-color: var(--specialYellowDark);
   z-index: -1;
 }
 
 .about-us-button {
   margin-top: 50px;
+
   padding-top: 9px;
   padding-bottom: 9px;
   padding-left: 25px;
@@ -1237,6 +1246,7 @@ li:nth-child(3) .services-button-active {
 
 .contacts {
   position: relative;
+
   min-width: 560px;
 }
 
@@ -1300,6 +1310,7 @@ li:nth-child(3) .services-button-active {
 .contacts-button:hover::before,
 .contacts-button:focus::before  {
   top: 0;
+
   height: 100%;
 }
 
@@ -1311,14 +1322,14 @@ li:nth-child(3) .services-button-active {
   margin-top: 57px;
   padding-bottom: 65px;
   background-color: var(--basicDark);
-
 }
 
 .logo-footer {
   display: inline-block;
+  
+  margin-top: 63px;
 
   vertical-align: middle;
-  margin-top: 63px;
 
   cursor: pointer;
 }
@@ -1336,12 +1347,14 @@ li:nth-child(3) .services-button-active {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
   border-top: 1px solid transparent;
 }
 
 .footer-nav-wrapper {
   display: flex;
   flex-wrap: wrap;
+
   margin-top: 41px;
 }
 
@@ -1354,8 +1367,9 @@ li:nth-child(3) .services-button-active {
 
 .footer-login a{
   position: relative;
-  padding-left: 27px;
   margin-right: 42px;
+
+  padding-left: 27px;
 }
 
 .footer-login a::before {
@@ -1381,22 +1395,21 @@ li:nth-child(3) .services-button-active {
   color: var(--specialWhite03);
 }
 
-
 .footer-login a:hover::before, 
 .footer-login a:focus::before  {
   opacity: 0.6;
 }
 
- 
 .footer-login a:active::before  {
   opacity: 0.3;
 }
 
 .footer-compare a{
   position: relative;
-  padding-left: 25px;
+  
   margin-right: 42px;
 
+  padding-left: 25px;
 }
 
 .footer-compare a::before {
@@ -1422,12 +1435,10 @@ li:nth-child(3) .services-button-active {
   color: var(--specialWhite03);
 }
 
-
 .footer-compare a:hover::before, 
 .footer-compare a:focus::before  {
   opacity: 0.6;
 }
-
  
 .footer-compare a:active::before  {
   opacity: 0.3;
@@ -1435,6 +1446,7 @@ li:nth-child(3) .services-button-active {
 
 .footer-shop a{
   position: relative;
+
   padding-left: 22px;
 }
 
@@ -1461,13 +1473,11 @@ li:nth-child(3) .services-button-active {
   color: var(--specialWhite03);
 }
 
-
 .footer-shop a:hover::before, 
 .footer-shop a:focus::before  {
   opacity: 0.6;
 }
 
- 
 .footer-shop a:active::before  {
   opacity: 0.3;
 }
@@ -1494,11 +1504,11 @@ li:nth-child(3) .services-button-active {
 .footer-navigation-list {
   display: flex;
   flex-wrap: wrap;
+
   margin: 0;
-  margin-top: 14px;
-  margin-right: 41px;
+  margin-top: 11px;
+  margin-right: 6px;
   padding: 0;
-  
   
   list-style: none;
 }
@@ -1506,7 +1516,7 @@ li:nth-child(3) .services-button-active {
 .footer-navigation-item {
   margin-right: 32px;
 }
-/
+
 .footer-navigation-item:last-child {
   margin-right: 0;
 }
@@ -1542,7 +1552,7 @@ li:nth-child(3) .services-button-active {
   justify-content: space-between;
   position: relative;
 
-  margin-top: 50px;
+  margin-top: 45px;
 }
 
 .footer-bottom::before {
@@ -1619,11 +1629,9 @@ li:nth-child(3) .services-button-active {
   opacity: 0.6;
 }
 
-
 .logo-creators:active {
   opacity: 0.3;
 }
-
 
 .modal {
   display: none;
@@ -1642,7 +1650,6 @@ li:nth-child(3) .services-button-active {
 
   transform: translate(-50%,-50%);
   z-index: 20000;
-  
 }
 
 .open-form {
@@ -1727,10 +1734,13 @@ li:nth-child(3) .services-button-active {
   padding-left: 20px;
 
   width: 360px;
+
   background-color: var(--specialLightGrey);
+
   border: none;
   border-radius: 3px;
   box-sizing: border: box;
+
   outline: none;
 }
 
@@ -1769,12 +1779,13 @@ li:nth-child(3) .services-button-active {
   width: 360px;
 
   background-color: var(--specialRed);
+
   border: 2px solid var(--specialRed);
   border-radius: 3px;
   box-sizing: border: box;
+
   outline: none;
 }
-
 
 .input-field::placeholder {
   font-size: 14px;
@@ -1857,6 +1868,7 @@ li:nth-child(3) .services-button-active {
   position: fixed;
   top: 50%;
   left: 50%;
+
   width: 994px;
   height: 593px; 
 
@@ -1873,12 +1885,12 @@ li:nth-child(3) .services-button-active {
   position: relative;
 }
 
-
 .close-map-button {
   display: inline-block;
   position: absolute;
   top: 32px;
   right: 37px;
+
   width: 55px;
   height: 55px;
 
@@ -1916,9 +1928,6 @@ li:nth-child(3) .services-button-active {
   background-color: var(--specialYellow);
   opacity: 0.6;
 }
-
-
-/*СТРАНИЦА КАТАЛОГА*/
 
 .inner-header .navigation-wrapper {
   padding-bottom: 47px;
@@ -1966,11 +1975,11 @@ li:nth-child(3) .services-button-active {
   line-height: 58px;
   font-family: 'Gilroy', 'Arial', sans-serif;
   font-weight: 800;
-
 }
 
 .breadcrumbs-list {
   display: flex;
+
   margin: 0;
   margin-top: 27px;
   margin-left: 60px;
@@ -1981,8 +1990,9 @@ li:nth-child(3) .services-button-active {
 
 .breadcrumbs-item {
   position: relative;
-  padding-right: 24px;
+  
   margin-right: 16px;
+  padding-right: 24px;
 }
 
 .breadcrumbs-item:nth-child(-n+2)::before {
@@ -1994,9 +2004,9 @@ li:nth-child(3) .services-button-active {
 
   width: 12px;
   height: 12px;
+
   background-image: url("../img/icon_arrow_nav.svg");
   background-repeat: no-repeat;
-
 }
 
 .breadcrumbs-item a{
@@ -2085,7 +2095,9 @@ li:nth-child(3) .services-button-active {
 
 .filter .scale {
   position: relative;
+
   margin-top: 30px;
+
   height: 2px;
   width: 100%;
 
@@ -2103,9 +2115,10 @@ li:nth-child(3) .services-button-active {
   position: absolute;
   top: -8px;
   
+  padding: 0;
+
   width: 4px;
   height: 4px;
-  padding: 0;
 
   background-color: var(--toggleGrey);
   border: 8px solid var(--basicWhite);
@@ -2137,8 +2150,7 @@ li:nth-child(3) .services-button-active {
 }
 
 .price-controls input {
-  width: 50px;
-  border: none;
+  width: 50px; 
 
   font-size: 14px;
   line-height: 16px;
@@ -2146,6 +2158,8 @@ li:nth-child(3) .services-button-active {
   font-weight: 300;
 
   background-color: transparent;
+
+  border: none;
 
   color: var(--basicBlack);
 }
@@ -2174,9 +2188,10 @@ li:nth-child(3) .services-button-active {
 }
 
 .color .checkbox-group {
+  position: relative;
+
   margin: 0;
   margin-bottom: 11px;
-  position: relative;
   padding-left: 42px;
 }
 
@@ -2217,14 +2232,16 @@ li:nth-child(3) .services-button-active {
   cursor: pointer;
 }
 
-.input-checkbox:hover + label::before {
+.input-checkbox:hover + label::before,
+.input-checkbox:focus + label::before {
   opacity: 0.3;
+  outline: double;
 }
 
-.input-checkbox:checked:hover + label::after {
+.input-checkbox:checked:hover + label::after,
+.input-checkbox:checked:focus + label::after {
   opacity: 0.3;
 }
-
 
 .input-checkbox:active + label::before {
   opacity: 1;
@@ -2252,7 +2269,6 @@ li:nth-child(3) .services-button-active {
   opacity: 0.3;
 }
 
-
 .filter .bluetooth {
   margin-top: 22px;
 }
@@ -2263,6 +2279,7 @@ li:nth-child(3) .services-button-active {
 
 .radio-group {
   position: relative;
+
   margin: 0;
   margin-top: 13px;
   padding-left: 40px;
@@ -2303,19 +2320,22 @@ li:nth-child(3) .services-button-active {
 
   cursor: pointer;
 }
-.input-radio:checked:hover + label::after {
+
+.input-radio:checked:hover + label::after,
+.input-radio:checked:focus + label::after  {
   opacity: 0.6;
+  outline: double;
 }
 
 .input-radio:checked:hover + label::before {
   display: none;
 }
 
-
-.input-radio:hover + label::before {
+.input-radio:hover + label::before,
+.input-radio:focus + label::before {
   opacity: 0.6;
+  outline: double; 
 }
-
 
 .input-radio:active + label::before {
   opacity: 1;
@@ -2327,7 +2347,9 @@ li:nth-child(3) .services-button-active {
   padding-right: 43px;
   padding-top: 9px;
   padding-bottom: 9px;
+
   background-color: transparent;
+
   border: none;
 
   cursor: pointer;
@@ -2342,14 +2364,16 @@ li:nth-child(3) .services-button-active {
 
   width: 100%;
   height: 8px;
+
   background-color: var(--specialYellowDark);
   z-index: -1;
 }
 
 .filter-button:hover::before,
 .filter-button:focus::before {
-  height: 100%;
   top: 0;
+
+  height: 100%;  
 }
 
 .filter-button:active {
@@ -2358,7 +2382,9 @@ li:nth-child(3) .services-button-active {
 
 .background-wrapper {
   position: relative;
+
   margin-top: 44px;
+
   background-image: linear-gradient(to right , var(--lightGrey) 36.6%, var(--basicWhite) 36.6%);
 }
 
@@ -2371,11 +2397,11 @@ li:nth-child(3) .services-button-active {
 
   width: 100%;
   height: 70px;
+
   background-image: linear-gradient(to right , var(--specialBasicGrey) 36.6%, var(--lightGrey) 36.6%);
 }
 
 .inner-catalog {
-  
   max-width: 760px;
   z-index: 3;
 }
@@ -2442,7 +2468,6 @@ li:nth-child(3) .services-button-active {
   color: var(--specialBlack06);
 }
 
-
 .sort-item:active a:not(.sort-active) {
   color: var(--basicBlack);
 }
@@ -2457,6 +2482,7 @@ li:nth-child(3) .services-button-active {
   margin: 0;
   margin-top: 24px;
   padding: 0;
+
   list-style: none;
 }
 
@@ -2469,8 +2495,6 @@ li:nth-child(3) .services-button-active {
   margin-left: 15px; 
 }
 
-
-
 .sort-arrows-item:hover a:not(.button-arrows-active),
 .sort-arrows-item:focus a:not(.button-arrows-active) {
   opacity: 0.6;
@@ -2481,6 +2505,10 @@ li:nth-child(3) .services-button-active {
 }
 
 .inner-catalog-item {
+  margin-bottom: 0;
+}
+
+.inner-catalog-item:nth-child(-n+2) {
   margin-bottom: 40px;
 }
 
@@ -2506,8 +2534,8 @@ li:nth-child(3) .services-button-active {
   background-repeat: no-repeat;
 }
 
-.inner-catalog-item:nth-child(4) .cart-content::before {
-  display: blocks;
+.inner-catalog-item:last-child .cart-content::before {
+  display: block
 }
 
 .cart-content-link {
@@ -2545,7 +2573,7 @@ li:nth-child(3) .services-button-active {
   font-size: 18px;
   line-height: 22px;
   font-family: 'Gilroy', 'Arial', sans-serif;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.03em;
   font-weight: 800;
   color: var(--basicBlack);
 }
@@ -2553,19 +2581,21 @@ li:nth-child(3) .services-button-active {
 .cart-title {
   display: flex;
   justify-content: space-between;
+
   margin-top: 19px;
 }
 
 .cart-title .cart-price {
   display: inline-block;
+
   margin-top: 8px;
+
   font-size: 16px;
   line-height: 18px;
   text-align: right;
   font-family: 'Gilroy', 'Arial', sans-serif;
   font-weight: 300;
   letter-spacing: 0.05em;
-
   vertical-align: middle;
 }
 
@@ -2619,7 +2649,8 @@ li:nth-child(3) .services-button-active {
 .catalog-pagination-list {
   display: flex;
   margin: 0;
-  margin-bottom: 78px;
+  margin-top: 26px;
+  margin-bottom: 75px;
   padding: 0;
 
   list-style: none;
@@ -2647,7 +2678,7 @@ li:nth-child(3) .services-button-active {
 }
 
 .catalog-pagination-item:first-child {
-  margin-right: auto;
+  margin-right: 216px;
 }
 
 .catalog-pagination-item:last-child {
@@ -2683,7 +2714,6 @@ li:nth-child(3) .services-button-active {
   color: var(--specialBlack06);
 }
 
-
 .catalog-pagination-item:not(:last-child):not(:first-child):active a[href] {
   color: var(--basicBlack);
 }  
@@ -2691,6 +2721,21 @@ li:nth-child(3) .services-button-active {
 .inner-footer {
   margin-top: 0;
 }
+
+.inner-footer .footer-login {
+  color: var(--basicWhite);
+}
+
+.inner-footer .footer-login a {
+  margin-right: 24px;
+}
+
+.inner-footer .footer-exit a {
+  color: var(--specialWhite03);
+  margin-right: 40px;
+}
+
+
 
 
 
