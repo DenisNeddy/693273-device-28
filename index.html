@@ -2,8 +2,8 @@
 <html lang="ru">
    <head>
       <meta charset="utf-8">
-      <link href="css/normalize.css" rel="stylesheet">
-      <link href="css/style.css" rel="stylesheet">
+      <link href="css/normalize.min.css" rel="stylesheet">
+      <link href="css/style.min.css" rel="stylesheet">
       <title>Магазин Device</title>
    </head>
    <body class="page-body">
@@ -16,7 +16,7 @@
                   </a>
                   <ul class="navigation-list">
                      <li class="navigation-item catalog">
-                        <a>
+                        <a href="#">
                         Каталог товаров
                         </a>
                         <div class="menu-list-wrapper">
@@ -407,8 +407,7 @@
                   <svg width="27" height="34" fill="none" xmlns="http://www.w3.org/2000/svg">
                      <g clip-path="url(#clip0)">
                         <path d="M13.62.017L13.472 0 0 1.408v24.596L13.473 34l13.43-7.969.042-.025V1.408L13.62.017zm11.399 12.078L13.495 5.32l-.001-.104-.087.05-.088-.056v.109L1.925 12.086V3.139l11.548-1.21L25.02 3.14v8.956h-.001zM13.405 6.769l11.518 6.695-4.479 2.633-7.093-4.21-.014 1.412 5.904 3.503-.86.506-5.03-2.984-.014 1.411 3.827 
-
-                  2.27-.782.521-3.031-1.782-.014 1.409 1.853 1.088-1.8 1.078-11.356-6.733 11.371-6.817zm-11.48 8.318l11.411 6.773.016 1.041-7.942-4.715-.015 1.412 7.979 4.783.018 1.073-7.973-4.728-.013 1.41 8.021 4.81.046.025 8.143-4.86-.011-5.163 3.415-2.03v9.994l-11.548 6.854-11.547-6.853v-9.826z" fill="#F0C52E"/>
+                           2.27-.782.521-3.031-1.782-.014 1.409 1.853 1.088-1.8 1.078-11.356-6.733 11.371-6.817zm-11.48 8.318l11.411 6.773.016 1.041-7.942-4.715-.015 1.412 7.979 4.783.018 1.073-7.973-4.728-.013 1.41 8.021 4.81.046.025 8.143-4.86-.011-5.163 3.415-2.03v9.994l-11.548 6.854-11.547-6.853v-9.826z" fill="#F0C52E"/>
                      </g>
                      <defs>
                         <clipPath id="clip0">
@@ -429,11 +428,11 @@
                <div class="input-group-wrapper">
                   <p class="input-group">
                      <label class="label-form" for="login-field">Ваше имя:</label>
-                     <input type="text" class="input-field" name="login" id="login-field" placeholder="Имя Фамилия" required>
+                     <input type="text" class="input-field" name="login" id="login-field" placeholder="Имя Фамилия">
                   </p>
                   <p class="input-group">
                      <label class="label-form" for="email-field">Ваш e-mail:</label>
-                     <input type="email" class="input-field" name="email" id="email-field" placeholder="email@example.com" required>
+                     <input type="email" class="input-field" name="email" id="email-field" placeholder="email@example.com">
                   </p>
                </div>
                <p class="input-group">
@@ -445,14 +444,12 @@
          </div>
       </div>
       <div class="map-popup">
-      	<div class="map-popup-wrapper">
-         <button type="button" class="close-map-button" aria-label="Закрыть форму"></button>
-         
-         <img src="img/map_popup.png" width="994" height="593" alt="Карта адреса компании Device">
-        </div>
+         <div class="map-popup-wrapper">
+            <button type="button" class="close-map-button" aria-label="Закрыть форму"></button>
+            <img src="img/map_popup.png" width="994" height="593" alt="Карта адреса компании Device">
+         </div>
       </div>
-      <script src="js/modal-form.js"></script>
-      <script src="js/modal-map.js"></script>
-      <script src="js/slider.js"></script>
+      <script src="js/modalForm.min.js"></script>
+      <script src="js/modalMap.min.js"></script>
    </body>
 </html>
