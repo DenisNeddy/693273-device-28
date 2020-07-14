@@ -1884,6 +1884,15 @@ li:nth-child(3) .services-button-active {
 
 .map-popup-wrapper {
   position: relative;
+
+  min-width: 994px;
+  min-height: 593px;
+
+  background-image: url(../img/map_popup.png);
+  background-repeat: no-repeat;
+  background-size: 994px 593px;
+
+  box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.15);
 }
 
 .close-map-button {
@@ -1907,10 +1916,6 @@ li:nth-child(3) .services-button-active {
 
 .map-popup iframe {
   border: 0;
-}
-
-.map-popup-wrapper img {
-  position: absolute;
 }
 
 .close-map-button::before {
