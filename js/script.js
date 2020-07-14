@@ -19,15 +19,19 @@ buttonModalClose.addEventListener('click', function(evt) {
  evt.preventDefault();
  modal.classList.remove('open-form');
  form.classList.remove('input-error');
+ modal.classList.remove('form-error');
 });
 
 form.addEventListener('submit', function (evt) {
   if(!login.value || !email.value) {
      evt.preventDefault();
+     
      input.classList.add('input-error');  
-     email.classList.add('input-error'); 
+     email.classList.add('input-error');
+     modal.classList.remove('form-error');
+     modal.offsetWidth = modal.offsetWidth;
+     modal.classList.add('form-error');
   } 
-  
 });
 
 OpenMapButton.addEventListener('click', function(evt) {
