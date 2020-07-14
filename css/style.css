@@ -868,6 +868,7 @@ img {
   position: relative;
 
   margin-top: 88px;
+  padding-bottom: 68px;
   
   background-color: var(--lightGrey);
 }
@@ -1106,7 +1107,7 @@ li:nth-child(3) .services-button-active {
   flex-wrap: wrap;
   
   margin: 0;
-  margin-top: 161px;
+  margin-top: 93px;
   padding: 0;
 
   list-style: none;
@@ -1506,8 +1507,8 @@ li:nth-child(3) .services-button-active {
   flex-wrap: wrap;
 
   margin: 0;
-  margin-top: 11px;
-  margin-right: 6px;
+  margin-top: 14px;
+  margin-right: 37px;
   padding: 0;
   
   list-style: none;
