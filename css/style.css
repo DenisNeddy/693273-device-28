@@ -1905,6 +1905,14 @@ li:nth-child(3) .services-button-active {
   cursor: pointer;
 }
 
+.map-popup iframe {
+  border: 0;
+}
+
+.map-popup-wrapper img {
+  position: absolute;
+}
+
 .close-map-button::before {
   content: "";
   display: block;
@@ -2657,11 +2665,14 @@ li:nth-child(3) .services-button-active {
   list-style: none;
 
   background-color: var(--lightGrey);
+  box-sizing: border-box;
 }
 
 .catalog-pagination-item {
   padding-top: 25px;
   padding-bottom: 25px;
+
+  box-sizing: border-box;
 }
 
 .catalog-pagination-item a {
